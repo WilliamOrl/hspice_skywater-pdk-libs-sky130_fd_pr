@@ -32,7 +32,7 @@
 .param
 + rdrift_p20vhv1='rdrift_tnom_p20vhv1*((w_p20vhv1-dw_p20vhv1)/w_p20vhv1)*(1+tc1_rdrift_p20vhv1*(temper-30)+tc2_rdrift_p20vhv1*(temper-30)*(temper-30))*sky130_fd_pr__pfet_20v0__rdrift_mult'
 m1 d1 g s b sky130_fd_pr__pfet_20v0__base  w=w_p20vhv1 l=l_p20vhv1 ad=0 as=as_p20vhv1 pd=0 ps=ps_p20vhv1 nrd=nrd_p20vhv1 nrs=nrs_p20vhv1 m=m
-rldd d d1 r='abs( (1/fetw_p20vhv1)*(rdrift_p20vhv1 /(1+0*(0-0-0 ))  )*  (1+0*pwr((abs(v(s,d)+vth2-min(v(s,d1),60))/(hvvsat*(1+hvvbdep*v(s,b)))),avsat)) )' tc1 = 0 tc2 = 0 m = {m}
+rldd d d1 r='abs( (1/fetw_p20vhv1)*(rdrift_p20vhv1 /(1+0*(0-0-0 ))  )*  (1+0*pwr((abs(v(s,d)+vth2-min(v(s,d1),60))/(hvvsat*(1+hvvbdep*v(s,b)))),avsat)) )' tc1 = 0 tc2 = 0 m = 'm'
 dnw1 d b sky130_fd_pr__pfet_20v0__parasitic__diode_pw2dn area='ad_p20vhv1/2' pj='pd_p20vhv1/2' m=m
 dnw2 d1 b sky130_fd_pr__pfet_20v0__parasitic__diode_pw2dn area='ad_p20vhv1/2' pj='pd_p20vhv1/2' m=m
 .model sky130_fd_pr__pfet_20v0__base.0 pmos

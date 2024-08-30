@@ -61,7 +61,7 @@
 + hvvsat='hvvsat_tnom*(1+tc1_hvvsat_n20nativevhviso1*(temper-30)+tc2_hvvsat_n20nativevhviso1*(temper-30)*(temper-30))*sky130_fd_pr__nfet_20v0_nvt__hvvsat_mult'
 + avsat='avsat_tnom*(1+tc1_avsat_n20nativevhviso1*(temper-30)+tc2_avsat_n20nativevhviso1*(temper-30)*(temper-30))*sky130_fd_pr__nfet_20v0__avsat_mult'
 m1 d1 g s b sky130_fd_pr__nfet_20v0__base  w=w_n20vhv1 l=hvnel_n20vhviso1 ad=0 as=0 pd=0 ps=0 nrd=nrd_n20vhv1 nrs=nrs_n20vhv1 delvto=delvto_n20vhv1 m=m
-rldd d d1 r='abs((1/w_n20vhv1)*(rdrift/(1+vgdep*(v(g,s)-vth-vbdep*v(b,s))))*(1+pwr((abs(v(d,s)+vth2-min(v(d1,s),60))/(hvvsat*(1+hvvbdep*v(b,s)))),avsat)))' tc1 = 0 tc2 = 0 m = {m}
+rldd d d1 r='abs((1/w_n20vhv1)*(rdrift/(1+vgdep*(v(g,s)-vth-vbdep*v(b,s))))*(1+pwr((abs(v(d,s)+vth2-min(v(d1,s),60))/(hvvsat*(1+hvvbdep*v(b,s)))),avsat)))' tc1 = 0 tc2 = 0 m = 'm'
 dNDrain1 b d  sky130_fd_pr__nfet_20v0_nvt__parasitic__diode_ps2dn area='0.5*ad_n20vhviso1' pj='0.5*pd_n20vhviso1' m=m
 dNDrain2 b d1 sky130_fd_pr__nfet_20v0_nvt__parasitic__diode_ps2dn area='0.5*ad_n20vhviso1' pj='0.5*pd_n20vhviso1' m=m
 dNSrc b s sky130_fd_pr__diode_pw2nd_05v5 area=as_n20vhv1 pj='ps_n20vhv1-w_n20vhv1' m=m

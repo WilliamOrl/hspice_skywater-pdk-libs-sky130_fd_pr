@@ -17,20 +17,20 @@
 .param sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre = 0.0
 .param sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre = 0.0
 .param sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre = 0.0
-* statistics {
-*   process {
-*   }
-*   mismatch {
+* statistics '
+*   process '
+*   '
+*   mismatch '
 *     vary sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre dist=gauss std = 1.0
-*   }
-* }
+*   '
+* '
 .subckt  sky130_fd_pr__pfet_01v8_lvt d g s b
 + 
 .param  l = 1 w = 1 nf = 1.0 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 mult = 1
-msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} w = {w} nf = {nf} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd}
+msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = 'l' w = 'w' nf = 'nf' ad = 'ad' as = 'as' pd = 'pd' ps = 'ps' nrd = 'nrd' nrs = 'nrs' sa = 'sa' sb = 'sb' sd = 'sd'
 .model sky130_fd_pr__pfet_01v8_lvt__model.0 pmos
 * DC IV MOS Parameters
 + lmin = 2.0e-05 lmax = 1.0e-04 wmin = 7e-06 wmax = 1.0e-4
@@ -83,7 +83,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -91,7 +91,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-0.452509+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))}
++ vth0 = '-0.452509+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.64774
 + k2 = -0.04782713
 + k3 = 3.39
@@ -136,9 +136,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -290,23 +290,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.1 pmos
@@ -361,7 +361,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -369,7 +369,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-0.452509+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))}
++ vth0 = '-0.452509+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.64774
 + k2 = -0.04782713
 + k3 = 3.39
@@ -414,9 +414,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -568,23 +568,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.2 pmos
@@ -639,7 +639,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -647,7 +647,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.619357840e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 7.536148201e-8
++ vth0 = '-4.619357840e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 7.536148201e-8
 + k1 = 0.64774
 + k2 = -4.894119812e-02 lk2 = 8.906306163e-9
 + k3 = 3.39
@@ -692,9 +692,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -846,23 +846,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.3 pmos
@@ -917,7 +917,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -925,7 +925,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.223840804e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -8.262384285e-8
++ vth0 = '-4.223840804e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -8.262384285e-8
 + k1 = 0.64774
 + k2 = -3.968662488e-02 lk2 = -2.806016118e-8
 + k3 = 3.39
@@ -970,9 +970,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -1124,23 +1124,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.4 pmos
@@ -1195,7 +1195,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -1203,7 +1203,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.703903488e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 1.311985885e-8
++ vth0 = '-4.703903488e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 1.311985885e-8
 + k1 = 0.64774
 + k2 = -4.752564752e-02 lk2 = -1.242601443e-8
 + k3 = 3.39
@@ -1248,9 +1248,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -1402,23 +1402,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.5 pmos
@@ -1473,7 +1473,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -1481,7 +1481,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.490338288e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -1.879532464e-8
++ vth0 = '-4.490338288e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -1.879532464e-8
 + k1 = 0.64774
 + k2 = -5.110258288e-02 lk2 = -7.080642224e-9
 + k3 = 3.39
@@ -1526,9 +1526,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-1.529629600e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))} lvoff = -4.324351258e-8
++ voff = '-1.529629600e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))' lvoff = -4.324351258e-8
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.597759520e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = -9.035070669e-8
++ nfactor = '2.597759520e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = -9.035070669e-8
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -1680,23 +1680,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.6 pmos
@@ -1751,7 +1751,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -1759,7 +1759,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.731173008e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 5.153279916e-9
++ vth0 = '-4.731173008e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 5.153279916e-9
 + k1 = 0.64774
 + k2 = -6.360790704e-02 lk2 = 5.354652121e-9
 + k3 = 3.39
@@ -1804,9 +1804,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-2.108370400e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))} lvoff = 1.430647258e-8
++ voff = '-2.108370400e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))' lvoff = 1.430647258e-8
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.476840480e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = 2.989118669e-8
++ nfactor = '2.476840480e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = 2.989118669e-8
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -1958,23 +1958,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.7 pmos
@@ -2029,7 +2029,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -2037,7 +2037,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.792412720e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 8.180971277e-9
++ vth0 = '-4.792412720e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 8.180971277e-9
 + k1 = 0.64774
 + k2 = -6.623966640e-02 lk2 = 6.655793948e-9
 + k3 = 3.39
@@ -2082,9 +2082,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -2236,23 +2236,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.8 pmos
@@ -2307,7 +2307,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -2315,7 +2315,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.865294601e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 2.376345466e-7
++ vth0 = '-4.865294601e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 2.376345466e-7
 + k1 = 0.64774
 + k2 = -5.280901249e-02 wk2 = 3.479868835e-8
 + k3 = 3.39
@@ -2360,9 +2360,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -2514,23 +2514,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.9 pmos
@@ -2585,7 +2585,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -2593,7 +2593,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.865294601e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 2.376345466e-7
++ vth0 = '-4.865294601e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 2.376345466e-7
 + k1 = 0.64774
 + k2 = -5.280901249e-02 wk2 = 3.479868835e-8
 + k3 = 3.39
@@ -2638,9 +2638,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -2792,23 +2792,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.10 pmos
@@ -2863,7 +2863,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -2871,7 +2871,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.981316602e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 9.275262867e-08 wvth0 = 2.528299327e-07 pvth0 = -1.214779942e-13
++ vth0 = '-4.981316602e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 9.275262867e-08 wvth0 = 2.528299327e-07 pvth0 = -1.214779942e-13
 + k1 = 0.64774
 + k2 = -5.805719263e-02 lk2 = 4.195605127e-08 wk2 = 6.367565923e-08 pk2 = -2.308540559e-13
 + k3 = 3.39
@@ -2916,9 +2916,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -3070,23 +3070,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.11 pmos
@@ -3141,7 +3141,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -3149,7 +3149,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.970759399e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -3.109043407e-07 wvth0 = -1.767785765e-07 pvth0 = 1.594550235e-12
++ vth0 = '-3.970759399e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -3.109043407e-07 wvth0 = -1.767785765e-07 pvth0 = 1.594550235e-12
 + k1 = 0.64774
 + k2 = -2.489203631e-02 lk2 = -9.051884911e-08 wk2 = -1.033409113e-07 pk2 = 4.362769332e-13
 + k3 = 3.39
@@ -3194,9 +3194,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -3348,23 +3348,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.12 pmos
@@ -3419,7 +3419,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -3427,7 +3427,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-6.295995097e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 1.528406671e-07 wvth0 = 1.112083631e-06 pvth0 = -9.759565522e-13
++ vth0 = '-6.295995097e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 1.528406671e-07 wvth0 = 1.112083631e-06 pvth0 = -9.759565522e-13
 + k1 = 0.64774
 + k2 = -5.921996873e-02 lk2 = -2.205522070e-08 wk2 = 8.168539499e-08 pk2 = 6.726046804e-14
 + k3 = 3.39
@@ -3472,9 +3472,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -3626,23 +3626,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.13 pmos
@@ -3697,7 +3697,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -3705,7 +3705,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.992457806e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -4.195994570e-08 wvth0 = 3.507328936e-07 pvth0 = 1.618059900e-13
++ vth0 = '-4.992457806e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -4.195994570e-08 wvth0 = 3.507328936e-07 pvth0 = 1.618059900e-13
 + k1 = 0.64774
 + k2 = -5.528005725e-02 lk2 = -2.794302442e-08 wk2 = 2.917985900e-08 pk2 = 1.457247410e-13
 + k3 = 3.39
@@ -3750,9 +3750,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-8.083669331e-02+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))} lvoff = -1.510290055e-07 wvoff = -5.038054349e-07 pvoff = 7.528868419e-13
++ voff = '-8.083669331e-02+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))' lvoff = -1.510290055e-07 wvoff = -5.038054349e-07 pvoff = 7.528868419e-13
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.748456325e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = -3.155520115e-07 wnfactor = -1.052624414e-06 pnfactor = 1.573041924e-12
++ nfactor = '2.748456325e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = -3.155520115e-07 wnfactor = -1.052624414e-06 pnfactor = 1.573041924e-12
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -3904,23 +3904,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.14 pmos
@@ -3975,7 +3975,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -3983,7 +3983,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-5.702377328e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 2.863445151e-08 wvth0 = 6.783908790e-07 pvth0 = -1.640171107e-13
++ vth0 = '-5.702377328e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 2.863445151e-08 wvth0 = 6.783908790e-07 pvth0 = -1.640171107e-13
 + k1 = 0.64774
 + k2 = -1.117953342e-01 lk2 = 2.825576697e-08 wk2 = 3.365914916e-07 pk2 = -1.599653865e-13
 + k3 = 3.39
@@ -4028,9 +4028,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-2.829633067e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))} lvoff = 4.996569883e-08 wvoff = 5.038054349e-07 pvoff = -2.490814070e-13
++ voff = '-2.829633067e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))' lvoff = 4.996569883e-08 wvoff = 5.038054349e-07 pvoff = -2.490814070e-13
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.326143675e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = 1.043956869e-07 wnfactor = 1.052624414e-06 pnfactor = -5.204175102e-13
++ nfactor = '2.326143675e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = 1.043956869e-07 wnfactor = 1.052624414e-06 pnfactor = -5.204175102e-13
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -4182,23 +4182,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.15 pmos
@@ -4253,7 +4253,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -4261,7 +4261,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-5.648983947e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 2.599468275e-08 wvth0 = 5.983191133e-07 pvth0 = -1.244296297e-13
++ vth0 = '-5.648983947e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 2.599468275e-08 wvth0 = 5.983191133e-07 pvth0 = -1.244296297e-13
 + k1 = 0.64774
 + k2 = -6.003801544e-02 lk2 = 2.666948580e-09 wk2 = -4.331882962e-08 pk2 = 2.786227636e-14
 + k3 = 3.39
@@ -4306,9 +4306,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -4460,23 +4460,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.16 pmos
@@ -4531,7 +4531,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -4539,7 +4539,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.449641247e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 3.042935440e-8
++ vth0 = '-4.449641247e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 3.042935440e-8
 + k1 = 0.64774
 + k2 = -4.424453353e-02 wk2 = -7.895650373e-9
 + k3 = 3.39
@@ -4584,9 +4584,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -4738,23 +4738,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.17 pmos
@@ -4809,7 +4809,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -4817,7 +4817,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.449641247e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 3.042935440e-8
++ vth0 = '-4.449641247e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 3.042935440e-8
 + k1 = 0.64774
 + k2 = -4.424453353e-02 wk2 = -7.895650373e-9
 + k3 = 3.39
@@ -4862,9 +4862,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -5016,23 +5016,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.18 pmos
@@ -5087,7 +5087,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -5095,7 +5095,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.387610425e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -4.958991985e-08 wvth0 = -4.313544628e-08 pvth0 = 5.881064426e-13
++ vth0 = '-4.387610425e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -4.958991985e-08 wvth0 = -4.313544628e-08 pvth0 = 5.881064426e-13
 + k1 = 0.64774
 + k2 = -3.687425423e-02 lk2 = -5.892096088e-08 wk2 = -4.192230550e-08 pk2 = 2.720226917e-13
 + k3 = 3.39
@@ -5140,9 +5140,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -5294,23 +5294,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.19 pmos
@@ -5365,7 +5365,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -5373,7 +5373,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.472146933e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -1.582265732e-08 wvth0 = 7.316551589e-08 pvth0 = 1.235538793e-13
++ vth0 = '-4.472146933e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -1.582265732e-08 wvth0 = 7.316551589e-08 pvth0 = 1.235538793e-13
 + k1 = 0.64774
 + k2 = -5.566791247e-02 lk2 = 1.614842762e-08 wk2 = 5.007830862e-08 pk2 = -9.546456129e-14
 + k3 = 3.39
@@ -5418,9 +5418,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -5572,23 +5572,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.20 pmos
@@ -5643,7 +5643,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -5651,7 +5651,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.382725820e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -3.365680408e-08 wvth0 = 1.583097125e-07 pvth0 = -4.625770650e-14
++ vth0 = '-4.382725820e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -3.365680408e-08 wvth0 = 1.583097125e-07 pvth0 = -4.625770650e-14
 + k1 = 0.64774
 + k2 = -5.250534235e-02 lk2 = 9.840997767e-09 wk2 = 4.821266018e-08 pk2 = -9.174371205e-14
 + k3 = 3.39
@@ -5696,9 +5696,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -5850,23 +5850,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.21 pmos
@@ -5921,7 +5921,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -5929,7 +5929,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.838287605e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 3.442234913e-08 wvth0 = 2.738783084e-07 pvth0 = -2.189634161e-13
++ vth0 = '-4.838287605e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 3.442234913e-08 wvth0 = 2.738783084e-07 pvth0 = -2.189634161e-13
 + k1 = 0.64774
 + k2 = -3.886579843e-02 lk2 = -1.054193667e-08 wk2 = -5.264600912e-08 pk2 = 5.897948335e-14
 + k3 = 3.39
@@ -5974,9 +5974,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {6.773703047e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = -6.330880713e-06 wnfactor = -2.111867254e-05 pnfactor = 3.155974424e-11
++ nfactor = '6.773703047e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = -6.330880713e-06 wnfactor = -2.111867254e-05 pnfactor = 3.155974424e-11
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -6128,23 +6128,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.22 pmos
@@ -6199,7 +6199,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -6207,7 +6207,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.211650916e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -2.789040322e-08 wvth0 = -6.474339260e-08 pvth0 = 1.177620033e-13
++ vth0 = '-4.211650916e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -2.789040322e-08 wvth0 = -6.474339260e-08 pvth0 = 1.177620033e-13
 + k1 = 0.64774
 + k2 = -4.217404180e-02 lk2 = -7.252219466e-09 wk2 = -1.047399277e-08 pk2 = 1.704363029e-14
 + k3 = 3.39
@@ -6252,9 +6252,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {4.071697472e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} wnfactor = 1.061880156e-5
++ nfactor = '4.071697472e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' wnfactor = 1.061880156e-5
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -6406,23 +6406,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.23 pmos
@@ -6477,7 +6477,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -6485,7 +6485,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.077983629e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -3.449891392e-08 wvth0 = -1.848320861e-07 pvth0 = 1.771338534e-13
++ vth0 = '-4.077983629e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -3.449891392e-08 wvth0 = -1.848320861e-07 pvth0 = 1.771338534e-13
 + k1 = 0.64774
 + k2 = -5.005687440e-02 lk2 = -3.354947025e-09 wk2 = -9.307529680e-08 pk2 = 5.788171500e-14
 + k3 = 3.39
@@ -6530,9 +6530,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {4.071697472e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} wnfactor = 1.061880156e-5
++ nfactor = '4.071697472e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' wnfactor = 1.061880156e-5
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -6684,23 +6684,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.24 pmos
@@ -6755,7 +6755,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -6763,7 +6763,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.499316648e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 4.525770017e-8
++ vth0 = '-4.499316648e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 4.525770017e-8
 + k1 = 0.64774
 + k2 = -5.094469785e-02 wk2 = 1.210466172e-8
 + k3 = 3.39
@@ -6808,9 +6808,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -6962,23 +6962,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.25 pmos
@@ -7033,7 +7033,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -7041,7 +7041,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.499316648e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 4.525770017e-8
++ vth0 = '-4.499316648e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 4.525770017e-8
 + k1 = 0.64774
 + k2 = -5.094469785e-02 wk2 = 1.210466172e-8
 + k3 = 3.39
@@ -7086,9 +7086,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -7240,23 +7240,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.26 pmos
@@ -7311,7 +7311,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -7319,7 +7319,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.703840235e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 1.635043363e-07 wvth0 = 5.126066980e-08 pvth0 = -4.799014046e-14
++ vth0 = '-4.703840235e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 1.635043363e-07 wvth0 = 5.126066980e-08 pvth0 = -4.799014046e-14
 + k1 = 0.64774
 + k2 = -5.617500129e-02 lk2 = 4.181313783e-08 wk2 = 1.569135093e-08 pk2 = -2.867342818e-14
 + k3 = 3.39
@@ -7364,9 +7364,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -7518,23 +7518,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.27 pmos
@@ -7589,7 +7589,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -7597,7 +7597,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.407785307e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 4.524815609e-08 wvth0 = 5.395326185e-08 pvth0 = -5.874543012e-14
++ vth0 = '-4.407785307e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 4.524815609e-08 wvth0 = 5.395326185e-08 pvth0 = -5.874543012e-14
 + k1 = 0.64774
 + k2 = -4.215464154e-02 lk2 = -1.418978714e-08 wk2 = 9.740546259e-09 pk2 = -4.903534004e-15
 + k3 = 3.39
@@ -7642,9 +7642,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -7796,23 +7796,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.28 pmos
@@ -7867,7 +7867,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -7875,7 +7875,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.813067111e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -7.336244111e-08 wvth0 = -1.173614650e-08 pvth0 = 7.226552589e-14
++ vth0 = '-3.813067111e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -7.336244111e-08 wvth0 = -1.173614650e-08 pvth0 = 7.226552589e-14
 + k1 = 0.64774
 + k2 = -3.363371117e-02 lk2 = -3.118393067e-08 wk2 = -8.120064724e-09 pk2 = 3.071766854e-14
 + k3 = 3.39
@@ -7920,9 +7920,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -8074,23 +8074,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.29 pmos
@@ -8145,7 +8145,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -8153,7 +8153,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.643340974e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -9.872631491e-08 wvth0 = -8.281899669e-08 pvth0 = 1.784917372e-13
++ vth0 = '-3.643340974e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -9.872631491e-08 wvth0 = -8.281899669e-08 pvth0 = 1.784917372e-13
 + k1 = 0.64774
 + k2 = -5.645174755e-02 lk2 = 2.915342883e-09 wk2 = -1.511068737e-10 pk2 = 1.880885793e-14
 + k3 = 3.39
@@ -8198,9 +8198,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {-1.699103047e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = 6.330880713e-06 wnfactor = 4.173060348e-06 pnfactor = -6.236221385e-12
++ nfactor = '-1.699103047e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = 6.330880713e-06 wnfactor = 4.173060348e-06 pnfactor = -6.236221385e-12
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -8352,23 +8352,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.30 pmos
@@ -8423,7 +8423,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -8431,7 +8431,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.780726907e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 1.437534228e-08 wvth0 = 1.051285223e-07 pvth0 = -8.403275717e-15
++ vth0 = '-4.780726907e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 1.437534228e-08 wvth0 = 1.051285223e-07 pvth0 = -8.403275717e-15
 + k1 = 0.64774
 + k2 = -5.238211477e-02 lk2 = -1.131499952e-09 wk2 = 1.999759504e-08 pk2 = -1.227011250e-15
 + k3 = 3.39
@@ -8476,9 +8476,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {4.667430253e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} wnfactor = -2.098280545e-6
++ nfactor = '4.667430253e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' wnfactor = -2.098280545e-6
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -8630,23 +8630,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.31 pmos
@@ -8701,7 +8701,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -8709,7 +8709,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-5.458335523e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} lvth0 = 4.787631223e-08 wvth0 = 2.272095801e-07 pvth0 = -6.876015069e-14
++ vth0 = '-5.458335523e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' lvth0 = 4.787631223e-08 wvth0 = 2.272095801e-07 pvth0 = -6.876015069e-14
 + k1 = 0.64774
 + k2 = -9.288085283e-02 lk2 = 1.889107615e-08 wk2 = 3.475633437e-08 pk2 = -8.523731978e-15
 + k3 = 3.39
@@ -8754,9 +8754,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {4.667430253e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))} wnfactor = -2.098280545e-6
++ nfactor = '4.667430253e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))' wnfactor = -2.098280545e-6
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -8908,23 +8908,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.32 pmos
@@ -8979,7 +8979,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -8987,7 +8987,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.347807959e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))} wvth0 = 3.033336706e-8
++ vth0 = '-4.347807959e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope/sqrt(l*w*mult))' wvth0 = 3.033336706e-8
 + k1 = 0.64774
 + k2 = -5.090782910e-02 wk2 = 1.206834424e-8
 + k3 = 3.39
@@ -9032,9 +9032,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -9186,23 +9186,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.33 pmos
@@ -9257,7 +9257,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -9265,7 +9265,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.347807959e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} wvth0 = 3.033336706e-8
++ vth0 = '-4.347807959e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' wvth0 = 3.033336706e-8
 + k1 = 0.64774
 + k2 = -5.090782910e-02 wk2 = 1.206834424e-8
 + k3 = 3.39
@@ -9310,9 +9310,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -9464,23 +9464,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.34 pmos
@@ -9535,7 +9535,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -9543,7 +9543,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.523512713e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 1.404654087e-07 wvth0 = 3.349754335e-08 pvth0 = -2.529569095e-14
++ vth0 = '-4.523512713e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 1.404654087e-07 wvth0 = 3.349754335e-08 pvth0 = -2.529569095e-14
 + k1 = 0.64774
 + k2 = -5.105819348e-02 lk2 = 1.202073004e-09 wk2 = 1.065104963e-08 pk2 = 1.133042001e-14
 + k3 = 3.39
@@ -9588,9 +9588,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -9742,23 +9742,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.35 pmos
@@ -9813,7 +9813,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -9821,7 +9821,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.941652697e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -9.195275628e-08 wvth0 = 8.036962248e-09 pvth0 = 7.640405420e-14
++ vth0 = '-3.941652697e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -9.195275628e-08 wvth0 = 8.036962248e-09 pvth0 = 7.640405420e-14
 + k1 = 0.64774
 + k2 = -4.036565549e-02 lk2 = -4.150820077e-08 wk2 = 7.978309123e-09 pk2 = 2.200641471e-14
 + k3 = 3.39
@@ -9866,9 +9866,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -10020,23 +10020,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.36 pmos
@@ -10091,7 +10091,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -10099,7 +10099,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.402707431e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} wvth0 = 4.634625537e-8
++ vth0 = '-4.402707431e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' wvth0 = 4.634625537e-8
 + k1 = 0.64774
 + k2 = -6.117803052e-02 wk2 = 1.901241196e-8
 + k3 = 3.39
@@ -10144,9 +10144,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -10298,23 +10298,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.37 pmos
@@ -10369,7 +10369,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -10377,7 +10377,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-5.932775357e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 2.286533508e-07 wvth0 = 1.427012793e-07 pvth0 = -1.439929477e-13
++ vth0 = '-5.932775357e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 2.286533508e-07 wvth0 = 1.427012793e-07 pvth0 = -1.439929477e-13
 + k1 = 0.64774
 + k2 = -1.153577372e-01 lk2 = 8.096615360e-08 wk2 = 5.787412039e-08 pk2 = -5.807493707e-14
 + k3 = 3.39
@@ -10422,9 +10422,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -10576,23 +10576,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.38 pmos
@@ -10647,7 +10647,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -10655,7 +10655,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.019187402e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 3.836616461e-08 wvth0 = 3.011322573e-08 pvth0 = -3.203538728e-14
++ vth0 = '-4.019187402e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 3.836616461e-08 wvth0 = 3.011322573e-08 pvth0 = -3.203538728e-14
 + k1 = 0.64774
 + k2 = -2.920573114e-02 lk2 = -4.703401191e-09 wk2 = -2.832255306e-09 pk2 = 2.291482921e-15
 + k3 = 3.39
@@ -10700,9 +10700,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -10854,23 +10854,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.39 pmos
@@ -10925,7 +10925,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -10933,7 +10933,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-1.782289999e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -7.222604304e-08 wvth0 = -1.348985490e-07 pvth0 = 4.954643417e-14
++ vth0 = '-1.782289999e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -7.222604304e-08 wvth0 = -1.348985490e-07 pvth0 = 4.954643417e-14
 + k1 = 0.64774
 + k2 = -4.695523411e-02 lk2 = 4.071953082e-09 wk2 = -1.048260450e-08 pk2 = 6.073815561e-15
 + k3 = 3.39
@@ -10978,9 +10978,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -11132,23 +11132,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.40 pmos
@@ -11203,7 +11203,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -11211,7 +11211,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.478440006e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} wvth0 = -1.618199141e-8
++ vth0 = '-3.478440006e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' wvth0 = -1.618199141e-8
 + k1 = 0.64774
 + k2 = -2.013907286e-02 wk2 = -4.394417249e-9
 + k3 = 3.39
@@ -11256,9 +11256,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -11410,23 +11410,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.41 pmos
@@ -11481,7 +11481,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -11489,7 +11489,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.243608117e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -4.695322724e-07 wvth0 = -2.874662467e-08 pvth0 = 2.512223033e-13
++ vth0 = '-3.243608117e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -4.695322724e-07 wvth0 = -2.874662467e-08 pvth0 = 2.512223033e-13
 + k1 = 0.64774
 + k2 = -1.514593992e-02 lk2 = -9.983469732e-08 wk2 = -7.065983044e-09 pk2 = 5.341635513e-14
 + k3 = 3.39
@@ -11534,9 +11534,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -11688,23 +11688,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.42 pmos
@@ -11759,7 +11759,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -11767,7 +11767,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-4.492072512e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 5.285401037e-07 wvth0 = 3.181534166e-08 pvth0 = -2.329342803e-13
++ vth0 = '-4.492072512e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 5.285401037e-07 wvth0 = 3.181534166e-08 pvth0 = -2.329342803e-13
 + k1 = 0.64774
 + k2 = -4.463150842e-02 lk2 = 1.358847315e-07 wk2 = 7.212464642e-09 pk2 = -6.073126705e-14
 + k3 = 3.39
@@ -11812,9 +11812,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -11966,23 +11966,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.43 pmos
@@ -12037,7 +12037,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -12045,7 +12045,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.566101092e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = 1.586700798e-07 wvth0 = -1.205685125e-08 pvth0 = -5.769119301e-14
++ vth0 = '-3.566101092e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = 1.586700798e-07 wvth0 = -1.205685125e-08 pvth0 = -5.769119301e-14
 + k1 = 0.64774
 + k2 = -1.521082292e-02 lk2 = 1.836674536e-08 wk2 = -5.480733731e-09 pk2 = -1.002955547e-14
 + k3 = 3.39
@@ -12090,9 +12090,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -12244,23 +12244,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.44 pmos
@@ -12315,7 +12315,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -12323,7 +12323,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-2.770523074e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} wvth0 = -4.098344221e-8
++ vth0 = '-2.770523074e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' wvth0 = -4.098344221e-8
 + k1 = 0.64774
 + k2 = -6.001664603e-03 wk2 = -1.050959227e-8
 + k3 = 3.39
@@ -12368,9 +12368,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -12522,23 +12522,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.45 pmos
@@ -12593,7 +12593,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -12601,7 +12601,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-2.069790807e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -1.047174300e-07 wvth0 = -6.398693646e-08 pvth0 = 3.437642181e-14
++ vth0 = '-2.069790807e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -1.047174300e-07 wvth0 = -6.398693646e-08 pvth0 = 3.437642181e-14
 + k1 = 0.64774
 + k2 = 1.968102556e-02 lk2 = -3.838021218e-08 wk2 = -1.437809953e-08 pk2 = 5.781097254e-15
 + k3 = 3.39
@@ -12646,9 +12646,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -12800,23 +12800,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 2.74e-6
 + sbref = 2.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.46 pmos
@@ -12871,7 +12871,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope2/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -12879,7 +12879,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-1.629749793e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope2/sqrt(l*w*mult))} lvth0 = -1.484751085e-07 wvth0 = -9.773315568e-08 pvth0 = 6.793366220e-14
++ vth0 = '-1.629749793e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope2/sqrt(l*w*mult))' lvth0 = -1.484751085e-07 wvth0 = -9.773315568e-08 pvth0 = 6.793366220e-14
 + k1 = 0.64774
 + k2 = 1.819576475e-02 lk2 = -3.690326883e-08 wk2 = -2.819433088e-08 pk2 = 1.951995770e-14
 + k3 = 3.39
@@ -12924,9 +12924,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -13078,23 +13078,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.74e-6
 + sbref = 1.74e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .model sky130_fd_pr__pfet_01v8_lvt__model.47 pmos
@@ -13149,7 +13149,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__toxe_slope_spectre)
-+ toxe = {4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))}
++ toxe = '4.23e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-09*(sky130_fd_pr__pfet_01v8_lvt__toxe_slope3/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7000000000000000e+17
 + nsd = 1.0e+20
@@ -13157,7 +13157,7 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre)
-+ vth0 = {-3.120368596e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))} lvth0 = -7.477891485e-08 wvth0 = -6.330492130e-08 pvth0 = 5.091234313e-14
++ vth0 = '-3.120368596e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__vth0_slope1/sqrt(l*w*mult))' lvth0 = -7.477891485e-08 wvth0 = -6.330492130e-08 pvth0 = 5.091234313e-14
 + k1 = 0.64774
 + k2 = -3.584916732e-02 lk2 = -1.018345441e-08 wk2 = -1.642488332e-08 pk2 = 1.370114283e-14
 + k3 = 3.39
@@ -13202,9 +13202,9 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__voff_slope_spectre)
-+ voff = {-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.1819+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__pfet_01v8_lvt__nfactor_slope_spectre)
-+ nfactor = {2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '2.5373+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__pfet_01v8_lvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
@@ -13356,23 +13356,23 @@ msky130_fd_pr__pfet_01v8_lvt d g s b sky130_fd_pr__pfet_01v8_lvt__model l = {l} 
 * Stress Parameters
 + saref = 1.44e-6
 + sbref = 1.44e-6
-+ wlod = {0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__pfet_01v8_lvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__pfet_01v8_lvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__pfet_01v8_lvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__pfet_01v8_lvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__pfet_01v8_lvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__pfet_01v8_lvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .ends sky130_fd_pr__pfet_01v8_lvt

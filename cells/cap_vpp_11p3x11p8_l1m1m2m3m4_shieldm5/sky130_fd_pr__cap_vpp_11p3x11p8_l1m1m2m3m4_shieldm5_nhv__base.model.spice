@@ -13,15 +13,15 @@
 * limitations under the License.
 
 * SKY130 Spice File.
-* statistics {
-*   mismatch {
-*   }
-* }
+* statistics '
+*   mismatch '
+*   '
+* '
 * 4-terminal Vertical Parallel Plate Capacitor /w LI-M4 fingers and M5 Shield
 .subckt  sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b
 + 
 .param  l = 4 w = 10 nf = 1.0 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 mult = 1
-Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base__model l = {l} w = {w} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd} nf = {nf}
+Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base__model l = 'l' w = 'w' ad = 'ad' as = 'as' pd = 'pd' ps = 'ps' nrd = 'nrd' nrs = 'nrs' sa = 'sa' sb = 'sb' sd = 'sd' nf = 'nf'
 .model sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base__model.0 nmos
 * DC IV MOS Parameters
 + lmin = 3.995e-06 lmax = 4.005e-06 wmin = 9.995e-06 wmax = 1.0005e-5
@@ -34,11 +34,11 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + lwn = 1.0
 + wln = 1.0
 + wwn = 1.0
-+ lint = {6.93e-008+sky130_fd_pr__nfet_05v0_nvt__lint_diff}
++ lint = '6.93e-008+sky130_fd_pr__nfet_05v0_nvt__lint_diff'
 + ll = 0.0
 + lw = 0.0
 + lwl = 0.0
-+ wint = {4.5e-008+sky130_fd_pr__nfet_05v0_nvt__wint_diff}
++ wint = '4.5e-008+sky130_fd_pr__nfet_05v0_nvt__wint_diff'
 + wl = 0.0
 + ww = 0.0
 + wwl = 0.0
@@ -74,17 +74,17 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 * BSIM4 - Process Parameters
 + epsrox = 3.9
 *(mismatch parameter sky130_fd_pr__nfet_05v0_nvt__toxe_slope_spectre)
-+ toxe = {1.061*1.16e-008*sky130_fd_pr__nfet_05v0_nvt__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(20*1.16e-008*sky130_fd_pr__nfet_05v0_nvt__toxe_mult*(sky130_fd_pr__nfet_05v0_nvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '1.061*1.16e-008*sky130_fd_pr__nfet_05v0_nvt__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(20*1.16e-008*sky130_fd_pr__nfet_05v0_nvt__toxe_mult*(sky130_fd_pr__nfet_05v0_nvt__toxe_slope/sqrt(l*w*mult)))'
 + dtox = 0.0
 + ndep = 1.7e+17
 + nsd = 1.0e+20
 + rshg = 0.1
-+ rsh = {1*sky130_fd_pr__nfet_05v0_nvt__rshn_mult}
++ rsh = '1*sky130_fd_pr__nfet_05v0_nvt__rshn_mult'
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__nfet_05v0_nvt__vth0_slope_spectre)
-+ vth0 = {0.06+sky130_fd_pr__nfet_05v0_nvt__vth0_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__vth0_slope/sqrt(l*w*mult))}
++ vth0 = '0.06+sky130_fd_pr__nfet_05v0_nvt__vth0_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.364
-+ k2 = {0.043475+sky130_fd_pr__nfet_05v0_nvt__k2_diff_1}
++ k2 = '0.043475+sky130_fd_pr__nfet_05v0_nvt__k2_diff_1'
 + k3 = 1.4
 + dvt0 = 5.7
 + dvt1 = 0.21851
@@ -102,22 +102,22 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + dvtp0 = 0.0
 + dvtp1 = 0.0
 * Mobility Parameters
-+ vsat = {73076+sky130_fd_pr__nfet_05v0_nvt__vsat_diff_1}
-+ ua = {8.4094e-010+sky130_fd_pr__nfet_05v0_nvt__ua_diff_1}
-+ ub = {1.2348e-018+sky130_fd_pr__nfet_05v0_nvt__ub_diff_1}
++ vsat = '73076+sky130_fd_pr__nfet_05v0_nvt__vsat_diff_1'
++ ua = '8.4094e-010+sky130_fd_pr__nfet_05v0_nvt__ua_diff_1'
++ ub = '1.2348e-018+sky130_fd_pr__nfet_05v0_nvt__ub_diff_1'
 + uc = 2.9976e-11
-+ rdsw = {430+sky130_fd_pr__nfet_05v0_nvt__rdsw_diff_1}
++ rdsw = '430+sky130_fd_pr__nfet_05v0_nvt__rdsw_diff_1'
 + prwb = 0.0
 + prwg = 1.0e-12
 + wr = 1.0
-+ u0 = {0.049769+sky130_fd_pr__nfet_05v0_nvt__u0_diff_1}
-+ a0 = {0.0832+sky130_fd_pr__nfet_05v0_nvt__a0_diff_1}
-+ keta = {-0.019904+sky130_fd_pr__nfet_05v0_nvt__keta_diff_1}
++ u0 = '0.049769+sky130_fd_pr__nfet_05v0_nvt__u0_diff_1'
++ a0 = '0.0832+sky130_fd_pr__nfet_05v0_nvt__a0_diff_1'
++ keta = '-0.019904+sky130_fd_pr__nfet_05v0_nvt__keta_diff_1'
 + a1 = 0.0
 + a2 = 0.96293372
-+ ags = {0.70396+sky130_fd_pr__nfet_05v0_nvt__ags_diff_1}
-+ b0 = {3.3993e-007+sky130_fd_pr__nfet_05v0_nvt__b0_diff_1}
-+ b1 = {0+sky130_fd_pr__nfet_05v0_nvt__b1_diff_1}
++ ags = '0.70396+sky130_fd_pr__nfet_05v0_nvt__ags_diff_1'
++ b0 = '3.3993e-007+sky130_fd_pr__nfet_05v0_nvt__b0_diff_1'
++ b1 = '0+sky130_fd_pr__nfet_05v0_nvt__b1_diff_1'
 * BSIM4 - Mobility Parameters
 + eu = 1.67
 + rdswmin = 0.0
@@ -127,26 +127,26 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + rswmin = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__nfet_05v0_nvt__voff_slope_spectre)
-+ voff = {0+sky130_fd_pr__nfet_05v0_nvt__voff_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__voff_slope/sqrt(l*w*mult))}
++ voff = '0+sky130_fd_pr__nfet_05v0_nvt__voff_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_05v0_nvt__nfactor_slope_spectre)
-+ nfactor = {0.63313+sky130_fd_pr__nfet_05v0_nvt__nfactor_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__nfactor_slope/sqrt(l*w*mult))}
++ nfactor = '0.63313+sky130_fd_pr__nfet_05v0_nvt__nfactor_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_05v0_nvt__nfactor_slope/sqrt(l*w*mult))'
 + up = 0.0
 + ud = 0.0
 + lp = 1.0
 + tvfbsdoff = 0.0
-+ tvoff = {0+sky130_fd_pr__nfet_05v0_nvt__tvoff_diff_1}
++ tvoff = '0+sky130_fd_pr__nfet_05v0_nvt__tvoff_diff_1'
 + cit = 9.2584123e-8
 + cdsc = 0.0
 + cdscb = 1.4150948e-7
 + cdscd = 1.5e-5
-+ eta0 = {9+sky130_fd_pr__nfet_05v0_nvt__eta0_diff_1}
++ eta0 = '9+sky130_fd_pr__nfet_05v0_nvt__eta0_diff_1'
 + etab = -0.00021692
 + dsub = 0.42
 * BSIM4 - Sub-threshold parameters
 + voffl = 1.9445332e-8
 + minv = 0.0
 * Rout Parameters
-+ pclm = {0.11748+sky130_fd_pr__nfet_05v0_nvt__pclm_diff_1}
++ pclm = '0.11748+sky130_fd_pr__nfet_05v0_nvt__pclm_diff_1'
 + pdiblc1 = 8.833e-7
 + pdiblc2 = 0.0002
 + pdiblcb = 0.0
@@ -160,9 +160,9 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + beta0 = 19.448
 * BSIM4 - Rout Parameters
 + fprout = 0.0
-+ pdits = {0.0068+sky130_fd_pr__nfet_05v0_nvt__pdits_diff_1}
++ pdits = '0.0068+sky130_fd_pr__nfet_05v0_nvt__pdits_diff_1'
 + pditsl = 0.0
-+ pditsd = {0+sky130_fd_pr__nfet_05v0_nvt__pditsd_diff_1}
++ pditsd = '0+sky130_fd_pr__nfet_05v0_nvt__pditsd_diff_1'
 * BSIM4 - Gate Induced Drain Leakage Model Parameters
 + agidl = 0.0
 + bgidl = 2.3e+9
@@ -191,7 +191,7 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + ntox = 1.0
 + toxref = 1.16e-8
 * Temperature Effects Parameters
-+ kt1 = {-0.35858+sky130_fd_pr__nfet_05v0_nvt__kt1_diff_1}
++ kt1 = '-0.35858+sky130_fd_pr__nfet_05v0_nvt__kt1_diff_1'
 + kt2 = -0.016016
 + at = 22800.0
 + ute = -1.7861
@@ -243,18 +243,18 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + tcj = 0.00083
 + tcjsw = 0.0
 + tcjswg = 0.0
-+ cgdo = {3.473e-010*sky130_fd_pr__nfet_05v0_nvt__overlap_mult}
-+ cgso = {3.473e-010*sky130_fd_pr__nfet_05v0_nvt__overlap_mult}
++ cgdo = '3.473e-010*sky130_fd_pr__nfet_05v0_nvt__overlap_mult'
++ cgso = '3.473e-010*sky130_fd_pr__nfet_05v0_nvt__overlap_mult'
 + cgbo = 0.0
 + capmod = 2.0
 + xpart = 0.0
-+ cgsl = {5e-011*sky130_fd_pr__nfet_05v0_nvt__overlap_mult}
-+ cgdl = {5e-011*sky130_fd_pr__nfet_05v0_nvt__overlap_mult}
++ cgsl = '5e-011*sky130_fd_pr__nfet_05v0_nvt__overlap_mult'
++ cgdl = '5e-011*sky130_fd_pr__nfet_05v0_nvt__overlap_mult'
 + cf = 0.0
 + clc = 1.0e-7
 + cle = 0.6
-+ dlc = {7.6493e-008+sky130_fd_pr__nfet_05v0_nvt__dlc_diff+sky130_fd_pr__nfet_05v0_nvt__dlc_rotweak}
-+ dwc = {0+sky130_fd_pr__nfet_05v0_nvt__dwc_diff}
++ dlc = '7.6493e-008+sky130_fd_pr__nfet_05v0_nvt__dlc_diff+sky130_fd_pr__nfet_05v0_nvt__dlc_rotweak'
++ dwc = '0+sky130_fd_pr__nfet_05v0_nvt__dwc_diff'
 + vfbcv = -1.0
 + acde = 1.16
 + moin = 15.0
@@ -269,35 +269,35 @@ Msky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base d g s b sky130_fd
 + wwlc = 0.0
 * BSIM4 - FET and Diode capacitance parameters
 + ckappas = 0.6
-+ cjs = {0.0008602*sky130_fd_pr__nfet_05v0_nvt__ajunction_mult}
++ cjs = '0.0008602*sky130_fd_pr__nfet_05v0_nvt__ajunction_mult'
 + mjs = 0.28329
 + pbs = 0.66345
-+ cjsws = {8.5152e-011*sky130_fd_pr__nfet_05v0_nvt__pjunction_mult}
++ cjsws = '8.5152e-011*sky130_fd_pr__nfet_05v0_nvt__pjunction_mult'
 + mjsws = 0.057926
 + pbsws = 1.0
-+ cjswgs = {3.58e-011*sky130_fd_pr__nfet_05v0_nvt__pjunction_mult}
++ cjswgs = '3.58e-011*sky130_fd_pr__nfet_05v0_nvt__pjunction_mult'
 + mjswgs = 0.33
 + pbswgs = 0.2442
 * Stress Parameters
 + saref = 3.0e-6
 + sbref = 3.0e-6
-+ wlod = {0+sky130_fd_pr__nfet_05v0_nvt__wlod_diff}
-+ kvth0 = {0+sky130_fd_pr__nfet_05v0_nvt__kvth0_diff}
-+ lkvth0 = {0+sky130_fd_pr__nfet_05v0_nvt__lkvth0_diff}
-+ wkvth0 = {0+sky130_fd_pr__nfet_05v0_nvt__wkvth0_diff}
++ wlod = '0+sky130_fd_pr__nfet_05v0_nvt__wlod_diff'
++ kvth0 = '0+sky130_fd_pr__nfet_05v0_nvt__kvth0_diff'
++ lkvth0 = '0+sky130_fd_pr__nfet_05v0_nvt__lkvth0_diff'
++ wkvth0 = '0+sky130_fd_pr__nfet_05v0_nvt__wkvth0_diff'
 + pkvth0 = 0.0
 + llodvth = 0.0
 + wlodvth = 1.0
 + stk2 = 0.0
 + lodk2 = 1.0
 + lodeta0 = 1.0
-+ ku0 = {0+sky130_fd_pr__nfet_05v0_nvt__ku0_diff}
-+ lku0 = {0+sky130_fd_pr__nfet_05v0_nvt__lku0_diff}
-+ wku0 = {0+sky130_fd_pr__nfet_05v0_nvt__wku0_diff}
++ ku0 = '0+sky130_fd_pr__nfet_05v0_nvt__ku0_diff'
++ lku0 = '0+sky130_fd_pr__nfet_05v0_nvt__lku0_diff'
++ wku0 = '0+sky130_fd_pr__nfet_05v0_nvt__wku0_diff'
 + pku0 = 0.0
 + llodku0 = 0.0
 + wlodku0 = 1.0
-+ kvsat = {0+sky130_fd_pr__nfet_05v0_nvt__kvsat_diff}
++ kvsat = '0+sky130_fd_pr__nfet_05v0_nvt__kvsat_diff'
 + steta0 = 0.0
 + tku0 = 0.0
 .ends sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base
