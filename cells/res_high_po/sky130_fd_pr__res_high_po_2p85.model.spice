@@ -13,6 +13,7 @@
 * limitations under the License.
 
 * SKY130 Spice File.
+.param GAU = AGAUSS(0,1.0,1)
 * statistics '
 * 	mismatch '
 *     	'
@@ -44,9 +45,9 @@
 + rend_var = 'sky130_fd_pr__res_high_po__var_mult*sqrt(2)*r0_var'
 + rbody_var = 'rtot_var-rend_var'
 *(mismatch parameter sky130_fd_pr__res_high_po__slope_spectre)
-+ res_match = '(body_pelgrom/sqrt(w*l*mult))*MC_MM_SWITCH*AGAUSS(0,1.0,1)'
++ res_match = '(body_pelgrom/sqrt(w*l*mult))*MC_MM_SWITCH*GAU'
 *(mismatch parameter sky130_fd_pr__res_high_po__con_slope_spectre)
-+ rend = '(rcon+rend_var)*(1+rend_mm/sqrt(mult)*MC_MM_SWITCH*AGAUSS(0,1.0,1))'
++ rend = '(rcon+rend_var)*(1+rend_mm/sqrt(mult)*MC_MM_SWITCH*GAU)'
 + rbody = '(l*rsheet+rbody_var)*(1+res_match)'
 rend r0 ra r = 'rend*(1+min((abs(v(r0,r1))-1.6),0.4)*vc1_end+pow(min(abs(v(r0,r1))-1.6,0.4),2)*vc2_end+pow(min(abs(v(r0,r1))-1.6,0.4),3)*vc3_end)'
 rhrpoly_2p85 ra r1 r = 'rbody*(1+abs(v(r0,r1))*vc1_body+pow(abs(v(r0,r1)),2)*vc2_body)'

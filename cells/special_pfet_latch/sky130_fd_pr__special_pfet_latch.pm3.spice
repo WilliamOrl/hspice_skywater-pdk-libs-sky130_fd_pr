@@ -13,20 +13,21 @@
 * limitations under the License.
 
 * SKY130 Spice File.
+.param GAU = AGAUSS(0,1.0,1)
 .param sky130_fd_pr__special_pfet_latch__tox_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_latch__vth0_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_latch__voff_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_latch__nfactor_slope_spectre = 0.0
-* statistics {
-*   process {
+* statistics '
+*   process '
 *   '
-*   mismatch {
+*   mismatch '
 *     vary sky130_fd_pr__special_pfet_latch__tox_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_latch__vth0_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_latch__voff_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_latch__nfactor_slope_spectre dist=gauss std = 1.0
-*   }
-* }
+*   '
+* '
 
 .subckt  sky130_fd_pr__special_pfet_latch d g s b
 + 
@@ -39,7 +40,7 @@ msky130_fd_pr__special_pfet_latch d g s b sky130_fd_pr__special_pfet_latch__mode
 + tnom = 30.0
 + version = 3.2
 *(mismatch parameter sky130_fd_pr__special_pfet_latch__tox_slope_spectre)
-+ tox = '4.214e-009*sky130_fd_pr__special_pfet_latch__tox_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.214e-09*sky130_fd_pr__special_pfet_latch__tox_mult*(sky130_fd_pr__special_pfet_latch__tox_slope/sqrt(l*w*mult)))'
++ tox = '4.214e-009*sky130_fd_pr__special_pfet_latch__tox_mult+MC_MM_SWITCH*GAU*(4.214e-09*sky130_fd_pr__special_pfet_latch__tox_mult*(sky130_fd_pr__special_pfet_latch__tox_slope/sqrt(l*w*mult)))'
 + toxm = 4.214e-9
 + xj = 1.15e-7
 + nch = 7.919257e+17
@@ -71,7 +72,7 @@ msky130_fd_pr__special_pfet_latch d g s b sky130_fd_pr__special_pfet_latch__mode
 + rsh = 1.0
 * Threshold Voltage Parameters
 *(mismatch parameter sky130_fd_pr__special_pfet_latch__vth0_slope_spectre)
-+ vth0 = '-0.8866+sky130_fd_pr__special_pfet_latch__vth0_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*((sky130_fd_pr__special_pfet_latch__vth0_slope/sqrt(l*w*mult)))'
++ vth0 = '-0.8866+sky130_fd_pr__special_pfet_latch__vth0_diff_0+MC_MM_SWITCH*GAU*((sky130_fd_pr__special_pfet_latch__vth0_slope/sqrt(l*w*mult)))'
 + k1 = 0.48313
 + k2 = '-0.086211+sky130_fd_pr__special_pfet_latch__k2_diff_0'
 + k3 = '0+sky130_fd_pr__special_pfet_latch__k3_diff'
@@ -105,9 +106,9 @@ msky130_fd_pr__special_pfet_latch d g s b sky130_fd_pr__special_pfet_latch__mode
 + b1 = 0.0
 * Subthreshold Current Parameters
 *(mismatch parameter sky130_fd_pr__special_pfet_latch__voff_slope_spectre)
-+ voff = '-0.17082+sky130_fd_pr__special_pfet_latch__voff_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*((sky130_fd_pr__special_pfet_latch__voff_slope/sqrt(l*w*mult)))'
++ voff = '-0.17082+sky130_fd_pr__special_pfet_latch__voff_diff_0+MC_MM_SWITCH*GAU*((sky130_fd_pr__special_pfet_latch__voff_slope/sqrt(l*w*mult)))'
 *(mismatch parameter sky130_fd_pr__special_pfet_latch__nfactor_slope_spectre)
-+ nfactor = '2+sky130_fd_pr__special_pfet_latch__nfactor_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*((sky130_fd_pr__special_pfet_latch__nfactor_slope/sqrt(l*w*mult)))'
++ nfactor = '2+sky130_fd_pr__special_pfet_latch__nfactor_diff_0+MC_MM_SWITCH*GAU*((sky130_fd_pr__special_pfet_latch__nfactor_slope/sqrt(l*w*mult)))'
 + cit = '-0.002+sky130_fd_pr__special_pfet_latch__cit_diff'
 + cdsc = '0+sky130_fd_pr__special_pfet_latch__cdsc_diff'
 + cdscb = '0.0005+sky130_fd_pr__special_pfet_latch__cdscb_diff'

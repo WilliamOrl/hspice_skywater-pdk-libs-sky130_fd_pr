@@ -13,22 +13,23 @@
 * limitations under the License.
 
 * SKY130 Spice File.
+.param GAU = AGAUSS(0,1.0,1)
 .param sky130_fd_pr__special_nfet_01v8__toxe_slope_spectre = 0.0
 .param sky130_fd_pr__special_nfet_01v8__vth0_slope_spectre = 0.0
 .param sky130_fd_pr__special_nfet_01v8__voff_slope_spectre = 0.0
-* statistics {
-*   process {
-*   }
-*   mismatch {
+* statistics '
+*   process '
+*   '
+*   mismatch '
 *     vary sky130_fd_pr__special_nfet_01v8__toxe_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_nfet_01v8__vth0_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_nfet_01v8__voff_slope_spectre dist=gauss std = 1.0
-*   }
-* }
+*   '
+* '
 .subckt  sky130_fd_pr__special_nfet_01v8 d g s b
 + 
 .param  l = 1 w = 1 nf = 1.0 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 mult = 1
-msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model l = {l} w = {w} nf = {nf} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd}
+msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model l = 'l' w = 'w' nf = 'nf' ad = 'ad' as = 'as' pd = 'pd' ps = 'ps' nrd = 'nrd' nrs = 'nrs' sa = 'sa' sb = 'sb' sd = 'sd'
 .model sky130_fd_pr__special_nfet_01v8__model.0 nmos
 * Model Flag Parameters
 + lmin = 1.5e-07 lmax = 1.8e-07 wmin = 3.9e-07 wmax = 4.2e-7
@@ -52,7 +53,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__toxe_slope_spectre)
-+ toxe = {3.996598e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.148e-9*0.9635*(sky130_fd_pr__special_nfet_01v8__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '3.996598e-09+MC_MM_SWITCH*GAU*(4.148e-9*0.9635*(sky130_fd_pr__special_nfet_01v8__toxe_slope/sqrt(l*w*mult)))'
 + toxm = 4.148e-9
 + dtox = 0.0
 + epsrox = 3.9
@@ -66,7 +67,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + wint = -6.60999999999998e-10
 + lint = 2.40595e-8
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__vth0_slope_spectre)
-+ vth0 = {-2.522595364e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_nfet_01v8__vth0_slope/sqrt(l*w*mult))} lvth0 = 3.827378328e-07 wvth0 = 1.366349450e-06 pvth0 = -1.801955318e-13
++ vth0 = '-2.522595364e+00+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_nfet_01v8__vth0_slope/sqrt(l*w*mult))' lvth0 = 3.827378328e-07 wvth0 = 1.366349450e-06 pvth0 = -1.801955318e-13
 + k1 = 0.90707349
 + k2 = -1.214234996e+00 lk2 = 1.428322922e-07 wk2 = 4.202331718e-07 pk2 = -5.542077093e-14
 + k3 = 2.0
@@ -92,7 +93,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + cdscd = 0.002052
 + cit = 0.0
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__voff_slope_spectre)
-+ voff = {-0.20753+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_nfet_01v8__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.20753+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_nfet_01v8__voff_slope/sqrt(l*w*mult))'
 + nfactor = -5.755837948e+00 lnfactor = 1.003645791e-06 wnfactor = 2.035947004e-06 pnfactor = -2.685027268e-13
 + eta0 = 3.773678949e-04 leta0 = -4.976765037e-11 weta0 = -1.589933803e-10 peta0 = 2.096820599e-17
 + etab = -0.043998
@@ -323,7 +324,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__toxe_slope_spectre)
-+ toxe = {3.996598e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.148e-9*0.9635*(sky130_fd_pr__special_nfet_01v8__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '3.996598e-09+MC_MM_SWITCH*GAU*(4.148e-9*0.9635*(sky130_fd_pr__special_nfet_01v8__toxe_slope/sqrt(l*w*mult)))'
 + toxm = 4.148e-9
 + dtox = 0.0
 + epsrox = 3.9
@@ -337,7 +338,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + wint = -6.60999999999998e-10
 + lint = 2.40595e-8
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__vth0_slope_spectre)
-+ vth0 = {-3.719569900e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_nfet_01v8__vth0_slope/sqrt(l*w*mult))} lvth0 = 9.910949335e-08 wvth0 = 5.247573396e-07 pvth0 = -6.920552270e-14
++ vth0 = '-3.719569900e-01+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_nfet_01v8__vth0_slope/sqrt(l*w*mult))' lvth0 = 9.910949335e-08 wvth0 = 5.247573396e-07 pvth0 = -6.920552270e-14
 + k1 = 0.90707349
 + k2 = -4.158704441e-01 lk2 = 3.754317674e-08 wk2 = 1.078155588e-07 pk2 = -1.421882371e-14
 + k3 = 2.0
@@ -363,7 +364,7 @@ msky130_fd_pr__special_nfet_01v8 d g s b sky130_fd_pr__special_nfet_01v8__model 
 + cdscd = 0.002052
 + cit = 0.0
 *(mismatch parameter sky130_fd_pr__special_nfet_01v8__voff_slope_spectre)
-+ voff = {-0.20753+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_nfet_01v8__voff_slope/sqrt(l*w*mult))}
++ voff = '-0.20753+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_nfet_01v8__voff_slope/sqrt(l*w*mult))'
 + nfactor = -5.755837763e+00 lnfactor = 1.003645766e-06 wnfactor = 2.035946931e-06 pnfactor = -2.685027173e-13
 + eta0 = 6.038887884e-04 leta0 = -7.964144934e-11 weta0 = -2.476359805e-10 peta0 = 3.265848075e-17
 + etab = -0.043998

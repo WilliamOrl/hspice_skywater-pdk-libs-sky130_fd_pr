@@ -14,6 +14,9 @@
 *
 * ./models_resistors.spice created from ./models.spice
 *
+
+.param GAU = AGAUSS(0,1.0,1)
+
 **********************************
 ******************************************************************
 ******************************************************************
@@ -107,27 +110,27 @@
 *          model for interconnect resistance       *
 ********************************************************************
 
-.model rndiff r tc1 = {tc1rsn} tc2 = {tc2rsn} rsh = {sw_rdn} dw = {"-sw_activecd-nfom_dw/2"} tref = 30
-.model rpdiff r tc1 = {tc1rsp} tc2 = {tc2rsp} rsh = {sw_rdp} dw = {"-sw_activecd-pfom_dw/2"} tref = 30
-.model rndiff_v5 r tc1 = {tc1rsn_h} tc2 = {tc2rsn_h} rsh = {sw_rdn*0.95} dw = {"-sw_activecd-nfom_dw/2"} tref = 30
-.model rpdiff_v5 r tc1 = {tc1rsp_h} tc2 = {tc2rsp_h} rsh = {sw_rdp*0.97} dw = {"-sw_activecd-pfom_dw/2"} tref = 30
-.model rnwell r tc1 = {tc1rsnw} tc2 = {tc2rsnw} rsh = {sw_rnw} dw = {"-sw_activecd/2"} tref = 30
-.model sky130_fd_pr__res_generic_l1 r tc1 = {tc1rl1} tc2 = {tc2rl1} rsh = {sw_rl1} dw = {"-sw_rl1_dw/2-li_dw/2"} tref = 30
-.model sky130_fd_pr__res_generic_m1 r tc1 = {tc1sky130_fd_pr__res_generic_m1} tc2 = {tc2sky130_fd_pr__res_generic_m1} rsh = {sw_sky130_fd_pr__res_generic_m1_rs} dw = {"-sw_m1_dw/2-m1_dw/2"} tref = 30
-.model sky130_fd_pr__res_generic_m2 r tc1 = {tc1sky130_fd_pr__res_generic_m2} tc2 = {tc2sky130_fd_pr__res_generic_m2} rsh = {sw_sky130_fd_pr__res_generic_m2_rs} dw = {"-sw_m2_dw/2-m2_dw/2"} tref = 30
-.model sky130_fd_pr__res_generic_m3 r tc1 = {tc1sky130_fd_pr__res_generic_m3} tc2 = {tc2sky130_fd_pr__res_generic_m3} rsh = {sw_sky130_fd_pr__res_generic_m3_rs} dw = {"-sw_m3_dw/2-m3_dw/2"} tref = 30
-.model sky130_fd_pr__res_generic_m4 r tc1 = {tc1sky130_fd_pr__res_generic_m4} tc2 = {tc2sky130_fd_pr__res_generic_m4} rsh = {sw_sky130_fd_pr__res_generic_m4_rs} dw = {"-sw_m4_dw/2-m4_dw/2"} tref = 30
-.model sky130_fd_pr__res_generic_m5 r tc1 = {tc1sky130_fd_pr__res_generic_m5} tc2 = {tc2sky130_fd_pr__res_generic_m5} rsh = {sw_sky130_fd_pr__res_generic_m5_rs} dw = {"-sw_m5_dw/2-m5_dw/2"} tref = 30
-.model mrrdl r tc1 = {tc1rrdl} tc2 = {tc2rrdl} rsh = {rrdl} dw = {"-tol_rdl/2-rdl_dw/2"} tref = 25
-.model mrcn r tc1 = {tc1rcn} tc2 = {tc2rcn} res = {rcn} tref = 30
-.model mrcp r tc1 = {tc1rcp} tc2 = {tc2rcp} res = {rcp} tref = 30
-.model mrcp1 r tc1 = {tc1rcgp} tc2 = {tc2rcgp} res = {rcp1} tref = 30
-.model mrcl1 r tc1 = {tc1rcl1} tc2 = {tc2rcl1} res = {rcl1} tref = 30
-.model mrcvia r tc1 = {tc1rvia} tc2 = {tc2rvia} res = {rcvia} tref = 30
-.model mrcvia2 r tc1 = {tc1rvia2} tc2 = {tc2rvia2} res = {rcvia2} tref = 30
-.model mrcvia3 r tc1 = {tc1rvia3} tc2 = {tc2rvia3} res = {rcvia3} tref = 30
-.model mrcvia4 r tc1 = {tc1rvia4} tc2 = {tc2rvia4} res = {rcvia4} tref = 30
-.model mrcrdlcon r tc1 = {tc1rrdlcon} tc2 = {tc2rrdlcon} res = {rcrdlcon} tref = 25
+.model rndiff r tc1 = 'tc1rsn' tc2 = 'tc2rsn' rsh = 'sw_rdn' dw = '"-sw_activecd-nfom_dw/2"' tref = 30
+.model rpdiff r tc1 = 'tc1rsp' tc2 = 'tc2rsp' rsh = 'sw_rdp' dw = '"-sw_activecd-pfom_dw/2"' tref = 30
+.model rndiff_v5 r tc1 = 'tc1rsn_h' tc2 = 'tc2rsn_h' rsh = 'sw_rdn*0.95' dw = '"-sw_activecd-nfom_dw/2"' tref = 30
+.model rpdiff_v5 r tc1 = 'tc1rsp_h' tc2 = 'tc2rsp_h' rsh = 'sw_rdp*0.97' dw = '"-sw_activecd-pfom_dw/2"' tref = 30
+.model rnwell r tc1 = 'tc1rsnw' tc2 = 'tc2rsnw' rsh = 'sw_rnw' dw = '"-sw_activecd/2"' tref = 30
+.model sky130_fd_pr__res_generic_l1 r tc1 = 'tc1rl1' tc2 = 'tc2rl1' rsh = 'sw_rl1' dw = '"-sw_rl1_dw/2-li_dw/2"' tref = 30
+.model sky130_fd_pr__res_generic_m1 r tc1 = 'tc1sky130_fd_pr__res_generic_m1' tc2 = 'tc2sky130_fd_pr__res_generic_m1' rsh = 'sw_sky130_fd_pr__res_generic_m1_rs' dw = '"-sw_m1_dw/2-m1_dw/2"' tref = 30
+.model sky130_fd_pr__res_generic_m2 r tc1 = 'tc1sky130_fd_pr__res_generic_m2' tc2 = 'tc2sky130_fd_pr__res_generic_m2' rsh = 'sw_sky130_fd_pr__res_generic_m2_rs' dw = '"-sw_m2_dw/2-m2_dw/2"' tref = 30
+.model sky130_fd_pr__res_generic_m3 r tc1 = 'tc1sky130_fd_pr__res_generic_m3' tc2 = 'tc2sky130_fd_pr__res_generic_m3' rsh = 'sw_sky130_fd_pr__res_generic_m3_rs' dw = '"-sw_m3_dw/2-m3_dw/2"' tref = 30
+.model sky130_fd_pr__res_generic_m4 r tc1 = 'tc1sky130_fd_pr__res_generic_m4' tc2 = 'tc2sky130_fd_pr__res_generic_m4' rsh = 'sw_sky130_fd_pr__res_generic_m4_rs' dw = '"-sw_m4_dw/2-m4_dw/2"' tref = 30
+.model sky130_fd_pr__res_generic_m5 r tc1 = 'tc1sky130_fd_pr__res_generic_m5' tc2 = 'tc2sky130_fd_pr__res_generic_m5' rsh = 'sw_sky130_fd_pr__res_generic_m5_rs' dw = '"-sw_m5_dw/2-m5_dw/2"' tref = 30
+.model mrrdl r tc1 = 'tc1rrdl' tc2 = 'tc2rrdl' rsh = 'rrdl' dw = '"-tol_rdl/2-rdl_dw/2"' tref = 25
+.model mrcn r tc1 = 'tc1rcn' tc2 = 'tc2rcn' res = 'rcn' tref = 30
+.model mrcp r tc1 = 'tc1rcp' tc2 = 'tc2rcp' res = 'rcp' tref = 30
+.model mrcp1 r tc1 = 'tc1rcgp' tc2 = 'tc2rcgp' res = 'rcp1' tref = 30
+.model mrcl1 r tc1 = 'tc1rcl1' tc2 = 'tc2rcl1' res = 'rcl1' tref = 30
+.model mrcvia r tc1 = 'tc1rvia' tc2 = 'tc2rvia' res = 'rcvia' tref = 30
+.model mrcvia2 r tc1 = 'tc1rvia2' tc2 = 'tc2rvia2' res = 'rcvia2' tref = 30
+.model mrcvia3 r tc1 = 'tc1rvia3' tc2 = 'tc2rvia3' res = 'rcvia3' tref = 30
+.model mrcvia4 r tc1 = 'tc1rvia4' tc2 = 'tc2rvia4' res = 'rcvia4' tref = 30
+.model mrcrdlcon r tc1 = 'tc1rrdlcon' tc2 = 'tc2rrdlcon' res = 'rcrdlcon' tref = 25
 
 ********************************************************************
 *          Subcircuit model
@@ -136,7 +139,7 @@
 .subckt  sky130_fd_pr__res_generic_nd t1 t2 b mult=1
 + w=1 l=1
 
-r0 t1 t2 rndiff w = {w} l = {l}
+r0 t1 t2 rndiff w = 'w' l = 'l'
 xd0 b t1 sky130_fd_pr__diode_pw2nd_05v5 area = 'w*l*0.5' perim = 'w+l'
 xd1 b t2 sky130_fd_pr__diode_pw2nd_05v5 area = 'w*l*0.5' perim = 'w+l'
 
@@ -145,7 +148,7 @@ xd1 b t2 sky130_fd_pr__diode_pw2nd_05v5 area = 'w*l*0.5' perim = 'w+l'
 .subckt  sky130_fd_pr__res_generic_pd t1 t2 b mult=1
 + w=1 l=1
 
-r0 t1 t2 rpdiff w = {w} l = {l}
+r0 t1 t2 rpdiff w = 'w' l = 'l'
 xd0 t1 b sky130_fd_pr__model__parasitic__diode_pd2nw area = 'w*l*0.5' perim = 'w+l'
 xd1 t2 b sky130_fd_pr__model__parasitic__diode_pd2nw area = 'w*l*0.5' perim = 'w+l'
 
@@ -162,8 +165,8 @@ xd1 t2 b sky130_fd_pr__model__parasitic__diode_pd2nw area = 'w*l*0.5' perim = 'w
 + w=1 l=1
 * Effective length and width
 + 
-.param  leff = {l-0.0592}
-+ weff = {w-0.056+2*sw_polycd}
+.param  leff = 'l-0.0592'
++ weff = 'w-0.056+2*sw_polycd'
 * Resistor voltco fitting parameters
 + bp2 = -0.1228
 + bq2 = 1.304
@@ -176,23 +179,23 @@ xd1 t2 b sky130_fd_pr__model__parasitic__diode_pd2nw area = 'w*l*0.5' perim = 'w
 + sub4 = 24 ;  half of the plateau voltage (12V)
 + sub5 = 39.86 ;  offset voltage of tanh function
 * Resistor head and body scalable equation
-+ rhead0 = {188.2/(weff-0.0672*max(0.69-w,0)+1.41)}
-+ rbody0 = {sw_sky130_fd_pr__res_xhigh_po_rs*leff/(weff-0.0672*max(0.69-w,0))} ;  the last term for w<0.69 current crowding
++ rhead0 = '188.2/(weff-0.0672*max(0.69-w,0)+1.41)'
++ rbody0 = 'sw_sky130_fd_pr__res_xhigh_po_rs*leff/(weff-0.0672*max(0.69-w,0))' ;  the last term for w<0.69 current crowding
 * Equations with variation
-+ Efac = {1/leff*(1+bp22/w+bp23*min(0.2,leff-0.5)*log(leff/w))}
-+ rhead = {rhead0*sw_poly_head_res*(1+sw_mm_sky130_fd_pr__res_generic_po_head*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*mult))}
-+ rbody = {rbody0*(1+sw_mm_sky130_fd_pr__res_xhigh_po*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*l*mult))}
++ Efac = '1/leff*(1+bp22/w+bp23*min(0.2,leff-0.5)*log(leff/w))'
++ rhead = 'rhead0*sw_poly_head_res*(1+sw_mm_sky130_fd_pr__res_generic_po_head*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*mult))'
++ rbody = 'rbody0*(1+sw_mm_sky130_fd_pr__res_xhigh_po*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*l*mult))'
 
-rend1 r0 t1 reshead r = {rhead}
-rend2 t2 r1 reshead r = {rhead}
-xc0 r0 sub sky130_fd_pr__model__parasitic__cap_p2ps w = {weff} l = {l+2.08} m = 0.5
-xc1 r1 sub sky130_fd_pr__model__parasitic__cap_p2ps w = {weff} l = {l+2.08} m = 0.5
+rend1 r0 t1 reshead r = 'rhead'
+rend2 t2 r1 reshead r = 'rhead'
+xc0 r0 sub sky130_fd_pr__model__parasitic__cap_p2ps w = 'weff' l = 'l+2.08' m = 0.5
+xc1 r1 sub sky130_fd_pr__model__parasitic__cap_p2ps w = 'weff' l = 'l+2.08' m = 0.5
 
-rbody t1 t2 resbody r = {rbody*(1-bp2+bp2*sqrt(1+(bq2*abs(v(t1,t2))*Efac)**2))*
-+ (sub1+sub2*tanh(sub3*(min(v(sub,r1)+v(sub,r1),sub4)+sub5))) / (sub1+sub2*tanh(sub3*sub5)) }
+rbody t1 t2 resbody r = 'rbody*(1-bp2+bp2*sqrt(1+(bq2*abs(v(t1,t2))*Efac)**2))*
++ (sub1+sub2*tanh(sub3*(min(v(sub,r1)+v(sub,r1),sub4)+sub5))) / (sub1+sub2*tanh(sub3*sub5)) '
 
 
-.model resbody r tc1 = {-1.47e-3-5e-7*sw_sky130_fd_pr__res_xhigh_po_rs} tc2 = 2.7e-6 tnom = 25
+.model resbody r tc1 = '-1.47e-3-5e-7*sw_sky130_fd_pr__res_xhigh_po_rs' tc2 = 2.7e-6 tnom = 25
 
 .model reshead r tc1 = -4.3e-4 tc2 = -1.3e-5 tnom = 25
 
@@ -214,25 +217,25 @@ rbody t1 t2 resbody r = {rbody*(1-bp2+bp2*sqrt(1+(bq2*abs(v(t1,t2))*Efac)**2))*
 
 * parameter values:
 + 
-.param  rbody_dw = {-0.001+sw_polycd*2e6}
+.param  rbody_dw = '-0.001+sw_polycd*2e6'
 + rhead_ps = 345.8312
-+ num_con_row = {max(floor(0.5+(w-0.33)/0.36),1)}
++ num_con_row = 'max(floor(0.5+(w-0.33)/0.36),1)'
 * resistance. The max() for exception due to exception spacing when w<0.69
-+ weff = {w+rbody_dw-0.0672*max(0.69-w,0)+2*sw_polycd}
-+ leff = {l+0.247}
++ weff = 'w+rbody_dw-0.0672*max(0.69-w,0)+2*sw_polycd'
++ leff = 'l+0.247'
 
-rhead r0 rb rhead_model w = {weff+0.1558} l = 1
-rbody rb r1 rbody_model w = {weff} l = {leff}
+rhead r0 rb rhead_model w = 'weff+0.1558' l = 1
+rbody rb r1 rbody_model w = 'weff' l = 'leff'
 
-xc0 r0 b sky130_fd_pr__model__parasitic__cap_p2ps w = {weff} l = {l+2.08} m = 0.5
-xc1 r1 b sky130_fd_pr__model__parasitic__cap_p2ps w = {weff} l = {l+2.08} m = 0.5
+xc0 r0 b sky130_fd_pr__model__parasitic__cap_p2ps w = 'weff' l = 'l+2.08' m = 0.5
+xc1 r1 b sky130_fd_pr__model__parasitic__cap_p2ps w = 'weff' l = 'l+2.08' m = 0.5
 
 .model rhead_model r 
-+ rsh = {rhead_ps*sw_poly_head_res*(1+sw_mm_sky130_fd_pr__res_generic_po_head*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*mult))}
++ rsh = 'rhead_ps*sw_poly_head_res*(1+sw_mm_sky130_fd_pr__res_generic_po_head*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*mult))'
 
 .model rbody_model r 
-+ rsh = {sw_sky130_fd_pr__res_high_po_rs*(1+sw_mm_sky130_fd_pr__res_high_po*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*l*mult))}
-+ tc1 = {tc1sky130_fd_pr__res_generic_pobody} tc2 = {tc2sky130_fd_pr__res_generic_pobody} tnom = 30
++ rsh = 'sw_sky130_fd_pr__res_high_po_rs*(1+sw_mm_sky130_fd_pr__res_high_po*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*l*mult))'
++ tc1 = 'tc1sky130_fd_pr__res_generic_pobody' tc2 = 'tc2sky130_fd_pr__res_generic_pobody' tnom = 30
 
 *   Voltage coefficient models to be verified in the future
 *   model rhead_model r2 sw_et=no isnoisy=no
@@ -260,11 +263,11 @@ xc1 r1 b sky130_fd_pr__model__parasitic__cap_p2ps w = {weff} l = {l+2.08} m = 0.
 
 .subckt  sky130_fd_pr__res_generic_po r0 r1 mult=1
 + 
-.param  w = 1 l = 0 r = 0 tc1 = {tc1rsgpu} tc2 = {tc2rsgpu}
-+ r_tot = {sw_rp1*l/(w-1e6*(sw_polycd*4-poly_dw))+r}
+.param  w = 1 l = 0 r = 0 tc1 = 'tc1rsgpu' tc2 = 'tc2rsgpu'
++ r_tot = 'sw_rp1*l/(w-1e6*(sw_polycd*4-poly_dw))+r'
 
-Rsky130_fd_pr__res_generic_po r0 r1 r = {r_tot*(1+sw_mm_sky130_fd_pr__res_generic_po*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*l*mult))}
-+ tc1 = {tc1} tc2 = {tc2}
+Rsky130_fd_pr__res_generic_po r0 r1 r = 'r_tot*(1+sw_mm_sky130_fd_pr__res_generic_po*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*l*mult))'
++ tc1 = 'tc1' tc2 = 'tc2'
 
 
 .ends sky130_fd_pr__res_generic_po
@@ -287,12 +290,12 @@ Rsky130_fd_pr__res_generic_po r0 r1 r = {r_tot*(1+sw_mm_sky130_fd_pr__res_generi
 + tref = 30.0
 + vvt = 3.531e-3
 + ut = 7.238e-6
-+ rtot = {sw_pw_rs*(1+sw_mm_sky130_fd_pr__res_iso_pw*mismatch_factor*MC_MM_SWITCH*AGAUSS(0,1.0,1)/sqrt(w*l*mult))}
++ rtot = 'sw_pw_rs*(1+sw_mm_sky130_fd_pr__res_iso_pw*mismatch_factor*MC_MM_SWITCH*GAU/sqrt(w*l*mult))'
 
-xdnw1 r0 b sky130_fd_pr__model__parasitic__diode_pw2dn area = {(l+dl)*w*0.5} perim = {(l+dl+w)}
-xdnw2 r1 b sky130_fd_pr__model__parasitic__diode_pw2dn area = {(l+dl)*w*0.5} perim = {(l+dl+w)}
+xdnw1 r0 b sky130_fd_pr__model__parasitic__diode_pw2dn area = '(l+dl)*w*0.5' perim = '(l+dl+w)'
+xdnw2 r1 b sky130_fd_pr__model__parasitic__diode_pw2dn area = '(l+dl)*w*0.5' perim = '(l+dl+w)'
 Rsky130_fd_pr__res_iso_pw r0 r1
-+ r = {rtot*sw_pw_rs_mc*((l+dl)/w)*(1-av*(max(v(r0),v(r1))-min(v(r0),v(r1))))*(1+bv*(v(b)-min(v(r0),v(r1))))*(1+vvt*(temper-tref)+ut*(temper-tref)*(temper-tref))}
++ r = 'rtot*sw_pw_rs_mc*((l+dl)/w)*(1-av*(max(v(r0),v(r1))-min(v(r0),v(r1))))*(1+bv*(v(b)-min(v(r0),v(r1))))*(1+vvt*(temper-tref)+ut*(temper-tref)*(temper-tref))'
 
 
 

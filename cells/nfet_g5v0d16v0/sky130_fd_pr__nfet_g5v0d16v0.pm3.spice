@@ -13,6 +13,7 @@
 * limitations under the License.
 
 * SKY130 Spice File.
+.param GAU = AGAUSS(0,1.0,1)
 .param
 + sky130_fd_pr__nfet_g5v0d16v0__mm_mult = 0.8
 .param sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre = 0.0
@@ -60,7 +61,7 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre)
-+ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
++ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*GAU*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
 + toxm = 1.16e-8
 + epsrox = 3.9
 + xj = 1.5e-7
@@ -71,11 +72,11 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + rshg = 0.1
 * Basic Model Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__wint_slope_spectre)
-+ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
++ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__lint_slope_spectre)
-+ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
++ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__vth0_slope_spectre)
-+ vth0 = '0.77216+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
++ vth0 = '0.77216+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_0+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.82559
 + k2 = '-0.047197+1.7195e-02+sky130_fd_pr__nfet_g5v0d16v0__k2_diff_0'
 + k3 = -0.884
@@ -101,9 +102,9 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + cdscd = 0.0
 + cit = -0.0008
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__voff_slope_spectre)
-+ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
++ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_0+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__nfactor_slope_spectre)
-+ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_0+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
++ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_0+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
 + eta0 = '0.016128+sky130_fd_pr__nfet_g5v0d16v0__eta0_diff_0'
 + etab = -0.02983
 + u0 = '0.041428+sky130_fd_pr__nfet_g5v0d16v0__u0_diff_0'
@@ -318,7 +319,7 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre)
-+ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
++ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*GAU*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
 + toxm = 1.16e-8
 + epsrox = 3.9
 + xj = 1.5e-7
@@ -329,11 +330,11 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + rshg = 0.1
 * Basic Model Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__wint_slope_spectre)
-+ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
++ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__lint_slope_spectre)
-+ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
++ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__vth0_slope_spectre)
-+ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
++ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_1+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.89738
 + k2 = '-0.047197+sky130_fd_pr__nfet_g5v0d16v0__k2_diff_1'
 + k3 = -0.884
@@ -359,9 +360,9 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + cdscd = 0.0
 + cit = -0.0008
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__voff_slope_spectre)
-+ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
++ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_1+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__nfactor_slope_spectre)
-+ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_1+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
++ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_1+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
 + eta0 = '0.016128+sky130_fd_pr__nfet_g5v0d16v0__eta0_diff_1'
 + etab = -0.02983
 + u0 = '0.034999+sky130_fd_pr__nfet_g5v0d16v0__u0_diff_1'
@@ -576,7 +577,7 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre)
-+ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
++ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*GAU*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope1/sqrt(l*w*mult)))'
 + toxm = 1.16e-8
 + epsrox = 3.9
 + xj = 1.5e-7
@@ -587,11 +588,11 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + rshg = 0.1
 * Basic Model Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__wint_slope_spectre)
-+ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
++ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__lint_slope_spectre)
-+ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
++ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__vth0_slope_spectre)
-+ vth0 = '0.77216+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_2+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
++ vth0 = '0.77216+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_2+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.82559
 + k2 = '-0.047197+1.6900e-02+sky130_fd_pr__nfet_g5v0d16v0__k2_diff_2'
 + k3 = -0.884
@@ -617,9 +618,9 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + cdscd = 0.0
 + cit = -0.0008
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__voff_slope_spectre)
-+ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_2+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
++ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_2+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__nfactor_slope_spectre)
-+ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_2+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
++ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_2+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
 + eta0 = '0.016128+sky130_fd_pr__nfet_g5v0d16v0__eta0_diff_2'
 + etab = -0.02983
 + u0 = '0.041428+sky130_fd_pr__nfet_g5v0d16v0__u0_diff_2'
@@ -834,7 +835,7 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre)
-+ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope2/sqrt(l*w*mult)))'
++ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*GAU*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope2/sqrt(l*w*mult)))'
 + toxm = 1.16e-8
 + epsrox = 3.9
 + xj = 1.5e-7
@@ -845,11 +846,11 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + rshg = 0.1
 * Basic Model Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__wint_slope_spectre)
-+ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
++ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__lint_slope_spectre)
-+ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
++ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__vth0_slope_spectre)
-+ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_3+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
++ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_3+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.89738
 + k2 = '-0.044197+sky130_fd_pr__nfet_g5v0d16v0__k2_diff_3'
 + k3 = -0.884
@@ -875,9 +876,9 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + cdscd = 0.0
 + cit = -0.0008
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__voff_slope_spectre)
-+ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_3+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
++ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_3+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__nfactor_slope_spectre)
-+ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_3+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
++ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_3+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
 + eta0 = '0.016128+sky130_fd_pr__nfet_g5v0d16v0__eta0_diff_3'
 + etab = -0.02983
 + u0 = '0.036814+sky130_fd_pr__nfet_g5v0d16v0__u0_diff_3'
@@ -1092,7 +1093,7 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__toxe_slope_spectre)
-+ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope2/sqrt(l*w*mult)))'
++ toxe = '1.16e-008*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult+MC_MM_SWITCH*GAU*(1.16e-08*sky130_fd_pr__nfet_g5v0d16v0__toxe_mult*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__toxe_slope2/sqrt(l*w*mult)))'
 + toxm = 1.16e-8
 + epsrox = 3.9
 + xj = 1.5e-7
@@ -1103,11 +1104,11 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + rshg = 0.1
 * Basic Model Parameters
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__wint_slope_spectre)
-+ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
++ wint = '2.1346e-008+sky130_fd_pr__nfet_g5v0d16v0__wint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__wint_slope/sqrt(l))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__lint_slope_spectre)
-+ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
++ lint = '7.6507e-008+sky130_fd_pr__nfet_g5v0d16v0__lint_diff+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__lint_slope/sqrt(w))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__vth0_slope_spectre)
-+ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_4+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
++ vth0 = '0.78433+sky130_fd_pr__nfet_g5v0d16v0__vth0_diff_4+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__vth0_slope/sqrt(l*w*mult))'
 + k1 = 0.89738
 + k2 = '-0.044197+sky130_fd_pr__nfet_g5v0d16v0__k2_diff_4'
 + k3 = -0.884
@@ -1133,9 +1134,9 @@ msky130_fd_pr__nfet_g5v0d16v0__base d g s b sky130_fd_pr__nfet_g5v0d16v0__model_
 + cdscd = 0.0
 + cit = -0.0008
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__voff_slope_spectre)
-+ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_4+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
++ voff = '-0.20613+sky130_fd_pr__nfet_g5v0d16v0__voff_diff_4+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*sky130_fd_pr__nfet_g5v0d10v5__voff_slope/sqrt(l*w*mult))'
 *(mismatch parameter sky130_fd_pr__nfet_g5v0d16v0__nfactor_slope_spectre)
-+ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_4+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
++ nfactor = '0.83837+sky130_fd_pr__nfet_g5v0d16v0__nfactor_diff_4+MC_MM_SWITCH*GAU*(sky130_fd_pr__nfet_g5v0d16v0__mm_mult*(sky130_fd_pr__nfet_g5v0d10v5__nfactor_slope+0.16)/sqrt(l*w*mult))'
 + eta0 = '0.016128+sky130_fd_pr__nfet_g5v0d16v0__eta0_diff_4'
 + etab = -0.02983
 + u0 = '0.036814+sky130_fd_pr__nfet_g5v0d16v0__u0_diff_4'

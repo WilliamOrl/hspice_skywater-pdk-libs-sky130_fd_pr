@@ -14,75 +14,87 @@
 *
 * SKY130 Spice File.
 * Critical Model Parameters:
-.param cnwvc = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param diff_cd = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param hvn_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.8,1)
-.param hvn_diode = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param hvn_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.8,1)
-.param hvn_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param hvn_subvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param hvn_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param hvp_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.8,1)
-.param hvp_diode = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param hvp_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.8,1)
-.param hvp_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.8,1)
-.param hvp_subvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param hvp_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param hvtox = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_cap = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_res = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_res_ndiff = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_res_pdiff = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_res_poly = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ic_res_pwell = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvhp_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.8,1)
-.param lvhp_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.0,1)
-.param lvhp_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.1,1)
-.param lvhp_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.8,1)
-.param lvln_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.0,1)
-.param lvln_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param lvln_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param lvln_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param lvlp_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.5,1)
-.param lvlp_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.3,1)
-.param lvlp_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.3,1)
-.param lvlp_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.3,1)
-.param lvn_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.0,1)
-.param lvn_diode = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvn_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param lvn_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.6,1)
-.param lvn_subvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvn_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,0.8,1)
-.param lvp_bodyeffect = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvp_diode = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvp_mobility = 0.0 + MC_PR_SWITCH*AGAUSS(0,2.0,1)
-.param lvp_saturation = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.1,1)
-.param lvp_subvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvp_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param lvtox = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.1,1)
-.param mim = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param hvntvn_threshold = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_20v0_nvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_20v0_nvt_iso = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_20v0 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_20v0_iso = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param n20zvtvh1defet = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_20v0_zvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param ndiff_cd = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param pfet_20v0 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param pdiff_cd = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param nfet_01v8_lvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param special_nfet_pass_lvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param sky130_fd_pr__npn_05v5_all = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param nfet_g5v0d16v0 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param pfet_01v8_mvt = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param pnp_05v5_W0p68L0p68 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param poly_cd = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.5,1)
-.param pfet_01v8 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param pfet_g5v0d16v0 = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-.param well_diode = 0.0 + MC_PR_SWITCH*AGAUSS(0,1.0,1)
-* statistics {
-*  process {
+.param GAU = AGAUSS(0,1.0,1)
+.param GAU2 = AGAUSS(0,1.5,1)
+.param GAU3 = AGAUSS(0,2.8,1)
+.param GAU4 = AGAUSS(0,0.8,1)
+.param GAU5 = AGAUSS(0,0.6,1)
+.param GAU6 = AGAUSS(0,1.8,1)
+.param GAU7 = AGAUSS(0,2.0,1)
+.param GAU8 = AGAUSS(0,1.1,1)
+.param GAU9 = AGAUSS(0,0.5,1)
+.param GAU10 = AGAUSS(0,0.3,1)
+.param GAU11 = AGAUSS(0,1.3,1)
+
+.param cnwvc = 0.0 + MC_PR_SWITCH*GAU
+.param diff_cd = 0.0 + MC_PR_SWITCH*GAU2
+.param hvn_bodyeffect = 0.0 + MC_PR_SWITCH*GAU3
+.param hvn_diode = 0.0 + MC_PR_SWITCH*GAU
+.param hvn_mobility = 0.0 + MC_PR_SWITCH*GAU4
+.param hvn_saturation = 0.0 + MC_PR_SWITCH*GAU5
+.param hvn_subvt = 0.0 + MC_PR_SWITCH*GAU
+.param hvn_threshold = 0.0 + MC_PR_SWITCH*GAU2
+.param hvp_bodyeffect = 0.0 + MC_PR_SWITCH*GAU3
+.param hvp_diode = 0.0 + MC_PR_SWITCH*GAU
+.param hvp_mobility = 0.0 + MC_PR_SWITCH*GAU6
+.param hvp_saturation = 0.0 + MC_PR_SWITCH*GAU6
+.param hvp_subvt = 0.0 + MC_PR_SWITCH*GAU
+.param hvp_threshold = 0.0 + MC_PR_SWITCH*GAU2
+.param hvtox = 0.0 + MC_PR_SWITCH*GAU
+.param ic_cap = 0.0 + MC_PR_SWITCH*GAU
+.param ic_res = 0.0 + MC_PR_SWITCH*GAU
+.param ic_res_ndiff = 0.0 + MC_PR_SWITCH*GAU
+.param ic_res_pdiff = 0.0 + MC_PR_SWITCH*GAU
+.param ic_res_poly = 0.0 + MC_PR_SWITCH*GAU
+.param ic_res_pwell = 0.0 + MC_PR_SWITCH*GAU
+.param lvhp_bodyeffect = 0.0 + MC_PR_SWITCH*GAU6
+.param lvhp_mobility = 0.0 + MC_PR_SWITCH*GAU7
+.param lvhp_saturation = 0.0 + MC_PR_SWITCH*GAU8
+.param lvhp_threshold = 0.0 + MC_PR_SWITCH*GAU4
+.param lvln_bodyeffect = 0.0 + MC_PR_SWITCH*GAU7
+.param lvln_mobility = 0.0 + MC_PR_SWITCH*GAU5
+.param lvln_saturation = 0.0 + MC_PR_SWITCH*GAU5
+.param lvln_threshold = 0.0 + MC_PR_SWITCH*GAU5
+.param lvlp_bodyeffect = 0.0 + MC_PR_SWITCH*GAU9
+.param lvlp_mobility = 0.0 + MC_PR_SWITCH*GAU10
+.param lvlp_saturation = 0.0 + MC_PR_SWITCH*GAU10
+.param lvlp_threshold = 0.0 + MC_PR_SWITCH*GAU11
+.param lvn_bodyeffect = 0.0 + MC_PR_SWITCH*GAU7
+.param lvn_diode = 0.0 + MC_PR_SWITCH*GAU
+.param lvn_mobility = 0.0 + MC_PR_SWITCH*GAU5
+.param lvn_saturation = 0.0 + MC_PR_SWITCH*GAU5
+.param lvn_subvt = 0.0 + MC_PR_SWITCH*GAU
+.param lvn_threshold = 0.0 + MC_PR_SWITCH*GAU4
+.param lvp_bodyeffect = 0.0 + MC_PR_SWITCH*GAU
+.param lvp_diode = 0.0 + MC_PR_SWITCH*GAU
+.param lvp_mobility = 0.0 + MC_PR_SWITCH*GAU7
+.param lvp_saturation = 0.0 + MC_PR_SWITCH*GAU8
+.param lvp_subvt = 0.0 + MC_PR_SWITCH*GAU
+.param lvp_threshold = 0.0 + MC_PR_SWITCH*GAU
+.param lvtox = 0.0 + MC_PR_SWITCH*GAU8
+.param mim = 0.0 + MC_PR_SWITCH*GAU
+.param hvntvn_threshold = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_20v0_nvt = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_20v0_nvt_iso = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_20v0 = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_20v0_iso = 0.0 + MC_PR_SWITCH*GAU
+.param n20zvtvh1defet = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_20v0_zvt = 0.0 + MC_PR_SWITCH*GAU
+.param ndiff_cd = 0.0 + MC_PR_SWITCH*GAU2
+.param pfet_20v0 = 0.0 + MC_PR_SWITCH*GAU
+.param pdiff_cd = 0.0 + MC_PR_SWITCH*GAU2
+.param nfet_01v8_lvt = 0.0 + MC_PR_SWITCH*GAU
+.param special_nfet_pass_lvt = 0.0 + MC_PR_SWITCH*GAU
+.param sky130_fd_pr__npn_05v5_all = 0.0 + MC_PR_SWITCH*GAU
+.param nfet_g5v0d16v0 = 0.0 + MC_PR_SWITCH*GAU
+.param pfet_01v8_mvt = 0.0 + MC_PR_SWITCH*GAU
+.param pnp_05v5_W0p68L0p68 = 0.0 + MC_PR_SWITCH*GAU
+.param poly_cd = 0.0 + MC_PR_SWITCH*GAU2
+.param pfet_01v8 = 0.0 + MC_PR_SWITCH*GAU
+.param pfet_g5v0d16v0 = 0.0 + MC_PR_SWITCH*GAU
+.param well_diode = 0.0 + MC_PR_SWITCH*GAU
+* statistics '
+*  process '
 *     vary cnwvc dist=gauss std=1.0
 *     vary diff_cd dist=gauss std=1.5
 *     vary hvn_bodyeffect dist=gauss std=2.8
@@ -150,7 +162,7 @@
 *     vary pfet_01v8 dist=gauss std=1.0
 *     vary pfet_g5v0d16v0 dist=gauss std=1.0
 *     vary well_diode dist=gauss std=1.0
-*   }
-*   mismatch {
-*   }
-* }
+*   '
+*   mismatch '
+*   '
+* '

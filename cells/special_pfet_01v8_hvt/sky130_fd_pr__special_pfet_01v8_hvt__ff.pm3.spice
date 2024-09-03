@@ -13,24 +13,25 @@
 * limitations under the License.
 
 * SKY130 Spice File.
+.param GAU = AGAUSS(0,1.0,1)
 .param sky130_fd_pr__special_pfet_01v8_hvt__toxe_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_01v8_hvt__vth0_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_01v8_hvt__voff_slope_spectre = 0.0
 .param sky130_fd_pr__special_pfet_01v8_hvt__nfactor_slope_spectre = 0.0
-* statistics {
-*   process {
-*   }
-*   mismatch {
+* statistics '
+*   process '
+*   '
+*   mismatch '
 *     vary sky130_fd_pr__special_pfet_01v8_hvt__toxe_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_01v8_hvt__vth0_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_01v8_hvt__voff_slope_spectre dist=gauss std = 1.0
 *     vary sky130_fd_pr__special_pfet_01v8_hvt__nfactor_slope_spectre dist=gauss std = 1.0
-*   }
-* }
+*   '
+* '
 .subckt  sky130_fd_pr__special_pfet_01v8_hvt d g s b
 + 
 .param  l = 1 w = 1 nf = 1.0 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 mult = 1
-msky130_fd_pr__special_pfet_01v8_hvt d g s b sky130_fd_pr__special_pfet_01v8_hvt__model l = {l} w = {w} nf = {nf} ad = {ad} as = {as} pd = {pd} ps = {ps} nrd = {nrd} nrs = {nrs} sa = {sa} sb = {sb} sd = {sd}
+msky130_fd_pr__special_pfet_01v8_hvt d g s b sky130_fd_pr__special_pfet_01v8_hvt__model l = 'l' w = 'w' nf = 'nf' ad = 'ad' as = 'as' pd = 'pd' ps = 'ps' nrd = 'nrd' nrs = 'nrs' sa = 'sa' sb = 'sb' sd = 'sd'
 .model sky130_fd_pr__special_pfet_01v8_hvt__model.0 pmos
 * Model Flag Parameters
 + lmin = 1.5e-07 lmax = 1.8e-07 wmin = 3.6e-07 wmax = 4.2e-7
@@ -54,7 +55,7 @@ msky130_fd_pr__special_pfet_01v8_hvt d g s b sky130_fd_pr__special_pfet_01v8_hvt
 + tempmod = 0.0
 * Process Parameters
 *(mismatch parameter sky130_fd_pr__special_pfet_01v8_hvt__toxe_slope_spectre)
-+ toxe = {4.075605e-09+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(4.23e-9*0.9635*(sky130_fd_pr__special_pfet_01v8_hvt__toxe_slope/sqrt(l*w*mult)))}
++ toxe = '4.075605e-09+MC_MM_SWITCH*GAU*(4.23e-9*0.9635*(sky130_fd_pr__special_pfet_01v8_hvt__toxe_slope/sqrt(l*w*mult)))'
 + toxm = 4.23e-9
 + dtox = 0.0
 + epsrox = 3.9
@@ -68,7 +69,7 @@ msky130_fd_pr__special_pfet_01v8_hvt d g s b sky130_fd_pr__special_pfet_01v8_hvt
 + wint = -1.3156e-8
 + lint = -8.1325e-9
 *(mismatch parameter sky130_fd_pr__special_pfet_01v8_hvt__vth0_slope_spectre)
-+ vth0 = {9.612074778e-01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_pfet_01v8_hvt__vth0_slope/sqrt(l*w*mult))} lvth0 = -3.972363322e-07 wvth0 = -8.993117806e-07 pvth0 = 1.765034266e-13
++ vth0 = '9.612074778e-01+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_pfet_01v8_hvt__vth0_slope/sqrt(l*w*mult))' lvth0 = -3.972363322e-07 wvth0 = -8.993117806e-07 pvth0 = 1.765034266e-13
 + k1 = -1.820663869e+00 lk1 = 5.244804765e-07 wk1 = 8.949482650e-07 pk1 = -1.756470212e-13
 + k2 = 1.570841132e-03 lk2 = -2.737854379e-08 wk2 = 8.815870511e-08 pk2 = -1.730246826e-14
 + k3 = -13.778
@@ -94,9 +95,9 @@ msky130_fd_pr__special_pfet_01v8_hvt d g s b sky130_fd_pr__special_pfet_01v8_hvt
 + cdscd = 0.0
 + cit = 1.0e-5
 *(mismatch parameter sky130_fd_pr__special_pfet_01v8_hvt__voff_slope_spectre)
-+ voff = {3.991766327e+00+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_pfet_01v8_hvt__voff_slope/sqrt(l*w*mult))} lvoff = -8.522401940e-07 wvoff = -1.888280002e-06 pvoff = 3.706032746e-13
++ voff = '3.991766327e+00+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_pfet_01v8_hvt__voff_slope/sqrt(l*w*mult))' lvoff = -8.522401940e-07 wvoff = -1.888280002e-06 pvoff = 3.706032746e-13
 *(mismatch parameter sky130_fd_pr__special_pfet_01v8_hvt__nfactor_slope_spectre)
-+ nfactor = {-1.035637660e+01+MC_MM_SWITCH*AGAUSS(0,1.0,1)*(sky130_fd_pr__special_pfet_01v8_hvt__nfactor_slope/sqrt(l*w*mult))} lnfactor = 2.655559853e-06 wnfactor = 5.453341069e-06 pnfactor = -1.070299985e-12
++ nfactor = '-1.035637660e+01+MC_MM_SWITCH*GAU*(sky130_fd_pr__special_pfet_01v8_hvt__nfactor_slope/sqrt(l*w*mult))' lnfactor = 2.655559853e-06 wnfactor = 5.453341069e-06 pnfactor = -1.070299985e-12
 + eta0 = 8.304765258e+00 leta0 = -1.533764903e-06 weta0 = -3.487823512e-06 peta0 = 6.845376816e-13
 + etab = 4.529799288e-01 letab = -8.890533237e-08 wetab = -2.006426673e-07 petab = 3.937913310e-14
 + u0 = -4.022000678e-02 lu0 = 8.719211341e-09 wu0 = 1.897757190e-08 pu0 = -3.724633148e-15
